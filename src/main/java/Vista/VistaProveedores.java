@@ -6,6 +6,8 @@ package Vista;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /**
  *
@@ -36,18 +38,32 @@ public class VistaProveedores extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        buscar_input = new javax.swing.JTextField();
+        buscar_button = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        nombre_input = new javax.swing.JTextField();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        descripcion_input = new javax.swing.JTextField();
+        jPanel13 = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        telefono_input = new javax.swing.JTextField();
         anadir_button = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabla_proveedores = new javax.swing.JTable();
         jPanel7 = new javax.swing.JPanel();
         editar_button = new javax.swing.JButton();
         eliminar_button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(700, 550));
+        setPreferredSize(new java.awt.Dimension(700, 550));
         getContentPane().setLayout(new java.awt.CardLayout());
 
         jPanel1.setBackground(new java.awt.Color(250, 246, 240));
@@ -73,30 +89,30 @@ public class VistaProveedores extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(88, 164, 218));
         jPanel4.setLayout(new java.awt.GridBagLayout());
 
-        jTextField1.setBackground(new java.awt.Color(88, 164, 218));
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField1.setText("Buscar");
-        jTextField1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField1.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jTextField1.setMinimumSize(new java.awt.Dimension(0, 0));
-        jTextField1.setPreferredSize(new java.awt.Dimension(140, 24));
-        jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
+        buscar_input.setBackground(new java.awt.Color(88, 164, 218));
+        buscar_input.setForeground(new java.awt.Color(0, 0, 0));
+        buscar_input.setText("Buscar");
+        buscar_input.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        buscar_input.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        buscar_input.setMinimumSize(new java.awt.Dimension(0, 0));
+        buscar_input.setPreferredSize(new java.awt.Dimension(140, 24));
+        buscar_input.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 focusBuscar(evt);
             }
         });
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        buscar_input.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                buscar_inputActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField1, new java.awt.GridBagConstraints());
+        jPanel4.add(buscar_input, new java.awt.GridBagConstraints());
 
-        jButton1.setBackground(new java.awt.Color(88, 164, 218));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buscar.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel4.add(jButton1, new java.awt.GridBagConstraints());
+        buscar_button.setBackground(new java.awt.Color(88, 164, 218));
+        buscar_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buscar.png"))); // NOI18N
+        buscar_button.setBorder(null);
+        buscar_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel4.add(buscar_button, new java.awt.GridBagConstraints());
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.ipadx = 10;
@@ -104,26 +120,157 @@ public class VistaProveedores extends javax.swing.JFrame {
 
         jPanel5.setBackground(new java.awt.Color(250, 246, 240));
 
-        anadir_button.setBackground(new java.awt.Color(250, 246, 240));
-        anadir_button.setForeground(new java.awt.Color(45, 78, 163));
-        anadir_button.setText("Agregar");
-        anadir_button.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(45, 78, 163), 3, true));
+        jPanel8.setBackground(new java.awt.Color(250, 246, 240));
+        jPanel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(23, 3, 18), 1, true));
+        jPanel8.setMinimumSize(new java.awt.Dimension(509, 102));
+        jPanel8.setLayout(new java.awt.GridLayout());
+
+        jPanel9.setBackground(new java.awt.Color(250, 246, 240));
+        jPanel9.setMinimumSize(new java.awt.Dimension(253, 100));
+
+        jPanel10.setBackground(new java.awt.Color(250, 246, 240));
+
+        jLabel3.setText("Nombre");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nombre_input, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(nombre_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10))
+        );
+
+        jPanel11.setBackground(new java.awt.Color(250, 246, 240));
+        jPanel11.setMinimumSize(new java.awt.Dimension(253, 44));
+
+        jLabel5.setText("Descripcion");
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(descripcion_input)
+                .addContainerGap())
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(descripcion_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10))
+        );
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 12, Short.MAX_VALUE))
+        );
+
+        jPanel8.add(jPanel9);
+
+        jPanel13.setBackground(new java.awt.Color(250, 246, 240));
+
+        jPanel14.setBackground(new java.awt.Color(250, 246, 240));
+        jPanel14.setMinimumSize(new java.awt.Dimension(253, 44));
+
+        jLabel7.setText("Telefono");
+
+        telefono_input.setPreferredSize(new java.awt.Dimension(140, 24));
+        telefono_input.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                telefono_inputActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(telefono_input, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(telefono_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10))
+        );
+
+        anadir_button.setText("Añadir");
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(anadir_button, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(anadir_button)
+                .addGap(0, 20, Short.MAX_VALUE))
+        );
+
+        jPanel8.add(jPanel13);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(anadir_button, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(40, 40, 40)
+                .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)
+                .addGap(41, 41, 41))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(anadir_button)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
         jPanel6.setBackground(new java.awt.Color(250, 246, 240));
@@ -132,7 +279,7 @@ public class VistaProveedores extends javax.swing.JFrame {
         jScrollPane1.setBackground(new java.awt.Color(250, 246, 240));
         jScrollPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 50, 1, 50));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabla_proveedores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -143,7 +290,7 @@ public class VistaProveedores extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabla_proveedores);
 
         jPanel6.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
@@ -199,10 +346,10 @@ public class VistaProveedores extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, "card2");
@@ -210,18 +357,22 @@ public class VistaProveedores extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void buscar_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscar_inputActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_buscar_inputActionPerformed
 
     private void focusBuscar(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_focusBuscar
         // TODO add your handling code here:
         //if(jTextField1.getText().equals("Buscar")){
-            jTextField1.setText("");
+            buscar_input.setText("");
             jPanel1.revalidate();
             jPanel1.repaint();
         //}
     }//GEN-LAST:event_focusBuscar
+
+    private void telefono_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefono_inputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_telefono_inputActionPerformed
 
     /**
      * @param args the command line arguments
@@ -270,22 +421,53 @@ public class VistaProveedores extends javax.swing.JFrame {
     public JButton get_eliminar_button(){
         return eliminar_button;
     }
+    public JTextField get_nombre_input(){
+        return nombre_input;
+    }
+    public JTextField get_telefono_input(){
+        return telefono_input;
+    }
+    public JTextField get_descripcion_input(){
+        return descripcion_input;
+    }
+    public JTable get_tabla_proveedores(){
+        return tabla_proveedores;
+    }
+    public JTextField get_buscar_input(){
+        return buscar_input;
+    }
+    public JButton get_buscar_button(){
+        return buscar_button;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton anadir_button;
+    private javax.swing.JButton buscar_button;
+    private javax.swing.JTextField buscar_input;
+    private javax.swing.JTextField descripcion_input;
     private javax.swing.JButton editar_button;
     private javax.swing.JButton eliminar_button;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField nombre_input;
+    private javax.swing.JTable tabla_proveedores;
+    private javax.swing.JTextField telefono_input;
     // End of variables declaration//GEN-END:variables
 }

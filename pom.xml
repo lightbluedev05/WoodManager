@@ -12,6 +12,17 @@
             <url>file:${project.basedir}/lib</url>
         </repository>
     </repositories>
+    
+    <dependencies>
+    <!-- Otras dependencias que ya tengas -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.23</version> <!-- Cambia por la versión necesaria -->
+        </dependency>
+    </dependencies>
+
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
