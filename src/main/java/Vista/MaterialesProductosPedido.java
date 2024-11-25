@@ -1,16 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Vista;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 
-/**
- *
- * @author Mihae
- */
+
 public class MaterialesProductosPedido extends javax.swing.JFrame {
 
     /**

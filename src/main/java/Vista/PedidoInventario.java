@@ -4,10 +4,14 @@
  */
 package Vista;
 
+import javax.swing.JButton;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 
 public class PedidoInventario extends javax.swing.JPanel {
     
-    private MaterialesProductosPedido elegirMaterialesProductosObj;
+    public MaterialesProductosPedido elegirMaterialesProductosObj;
     
     public PedidoInventario() {
         elegirMaterialesProductosObj = new MaterialesProductosPedido();
@@ -27,30 +31,30 @@ public class PedidoInventario extends javax.swing.JPanel {
         jPanel8 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        tipo_pintado_input = new javax.swing.JTextField();
         jPanel12 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        medida_input = new javax.swing.JTextField();
         jPanel14 = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        color_cera_input = new javax.swing.JTextField();
         jPanel16 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jButton10 = new javax.swing.JButton();
+        cantidad_input = new javax.swing.JTextField();
+        anadir_button = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabla_pedido = new javax.swing.JTable();
         jPanel17 = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
+        eliminar_button = new javax.swing.JButton();
         jPanel19 = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
+        guardar_button = new javax.swing.JButton();
         jPanel20 = new javax.swing.JPanel();
-        jButton8 = new javax.swing.JButton();
-        jTextField11 = new javax.swing.JTextField();
+        salir_button = new javax.swing.JButton();
+        descripcion_input = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(250, 246, 240));
         setMaximumSize(new java.awt.Dimension(600, 439));
@@ -76,7 +80,7 @@ public class PedidoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField6)
+                .addComponent(tipo_pintado_input)
                 .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
@@ -85,7 +89,7 @@ public class PedidoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tipo_pintado_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10))
         );
 
@@ -102,7 +106,7 @@ public class PedidoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(medida_input, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
@@ -111,7 +115,7 @@ public class PedidoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(medida_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10))
         );
 
@@ -140,9 +144,9 @@ public class PedidoInventario extends javax.swing.JPanel {
 
         jLabel11.setText("Color Cera");
 
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        color_cera_input.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                color_cera_inputActionPerformed(evt);
             }
         });
 
@@ -154,7 +158,7 @@ public class PedidoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
+                .addComponent(color_cera_input, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel15Layout.setVerticalGroup(
@@ -163,7 +167,7 @@ public class PedidoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(color_cera_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10))
         );
 
@@ -171,6 +175,12 @@ public class PedidoInventario extends javax.swing.JPanel {
         jPanel16.setMinimumSize(new java.awt.Dimension(253, 44));
 
         jLabel12.setText("Cantidad");
+
+        cantidad_input.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                controlador_cantidad_ingreso(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -180,7 +190,7 @@ public class PedidoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField10)
+                .addComponent(cantidad_input)
                 .addContainerGap())
         );
         jPanel16Layout.setVerticalGroup(
@@ -189,14 +199,14 @@ public class PedidoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cantidad_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10))
         );
 
-        jButton10.setText("Añadir");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        anadir_button.setText("Añadir");
+        anadir_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                anadir_buttonActionPerformed(evt);
             }
         });
 
@@ -211,7 +221,7 @@ public class PedidoInventario extends javax.swing.JPanel {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(anadir_button, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel14Layout.setVerticalGroup(
@@ -221,7 +231,7 @@ public class PedidoInventario extends javax.swing.JPanel {
                 .addGap(0, 0, 0)
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton10)
+                .addComponent(anadir_button)
                 .addGap(0, 14, Short.MAX_VALUE))
         );
 
@@ -231,7 +241,7 @@ public class PedidoInventario extends javax.swing.JPanel {
 
         jLabel2.setText("Producto");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabla_pedido.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -242,32 +252,32 @@ public class PedidoInventario extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabla_pedido);
 
         jPanel17.setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel18.setLayout(new java.awt.GridBagLayout());
 
-        jButton6.setText("Eliminar");
-        jPanel18.add(jButton6, new java.awt.GridBagConstraints());
+        eliminar_button.setText("Eliminar");
+        jPanel18.add(eliminar_button, new java.awt.GridBagConstraints());
 
         jPanel17.add(jPanel18);
 
         jPanel19.setLayout(new java.awt.GridBagLayout());
 
-        jButton7.setText("Guardar");
-        jPanel19.add(jButton7, new java.awt.GridBagConstraints());
+        guardar_button.setText("Guardar");
+        jPanel19.add(guardar_button, new java.awt.GridBagConstraints());
 
         jPanel17.add(jPanel19);
 
         jPanel20.setLayout(new java.awt.GridBagLayout());
 
-        jButton8.setText("Salir");
-        jPanel20.add(jButton8, new java.awt.GridBagConstraints());
+        salir_button.setText("Salir");
+        jPanel20.add(salir_button, new java.awt.GridBagConstraints());
 
         jPanel17.add(jPanel20);
 
-        jTextField11.setPreferredSize(new java.awt.Dimension(250, 24));
+        descripcion_input.setPreferredSize(new java.awt.Dimension(250, 24));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -276,7 +286,7 @@ public class PedidoInventario extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(41, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(descripcion_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel2)
                         .addComponent(jLabel1)
@@ -291,7 +301,7 @@ public class PedidoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(descripcion_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -304,20 +314,69 @@ public class PedidoInventario extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void color_cera_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_color_cera_inputActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_color_cera_inputActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void anadir_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anadir_buttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_anadir_buttonActionPerformed
 
+    private void controlador_cantidad_ingreso(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_controlador_cantidad_ingreso
+        char c =evt.getKeyChar();
+
+        if(c<'0' || c> '9' ) evt.consume();
+    }//GEN-LAST:event_controlador_cantidad_ingreso
+    
+    public JTextField get_medida_input() {
+        return medida_input;
+    }
+
+    public JButton get_salir_button() {
+        return salir_button;
+    }
+
+    public JTable get_tabla_pedido() {
+        return tabla_pedido;
+    }
+
+    public JTextField get_tipo_pintado_input() {
+        return tipo_pintado_input;
+    }
+
+    public JButton get_anadir_button() {
+        return anadir_button;
+    }
+
+    public JTextField get_cantidad_input() {
+        return cantidad_input;
+    }
+
+    public JTextField get_color_cera_input() {
+        return color_cera_input;
+    }
+
+    public JTextField get_descripcion_input() {
+        return descripcion_input;
+    }
+
+    public JButton get_eliminar_button() {
+        return eliminar_button;
+    }
+
+    public JButton get_guardar_button() {
+        return guardar_button;
+    }
+
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton anadir_button;
+    private javax.swing.JTextField cantidad_input;
+    private javax.swing.JTextField color_cera_input;
+    private javax.swing.JTextField descripcion_input;
+    private javax.swing.JButton eliminar_button;
+    private javax.swing.JButton guardar_button;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -336,11 +395,9 @@ public class PedidoInventario extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField medida_input;
+    private javax.swing.JButton salir_button;
+    private javax.swing.JTable tabla_pedido;
+    private javax.swing.JTextField tipo_pintado_input;
     // End of variables declaration//GEN-END:variables
 }

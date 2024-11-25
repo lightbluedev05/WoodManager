@@ -5,6 +5,7 @@
 package Vista;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -20,7 +21,7 @@ public class VistaMateriales extends javax.swing.JFrame {
      */
     public VistaMateriales() {
         initComponents();
-        
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -127,7 +128,7 @@ public class VistaMateriales extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(250, 246, 240));
         jPanel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(23, 3, 18), 1, true));
         jPanel8.setMinimumSize(new java.awt.Dimension(509, 102));
-        jPanel8.setLayout(new java.awt.GridLayout());
+        jPanel8.setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel9.setBackground(new java.awt.Color(250, 246, 240));
         jPanel9.setMinimumSize(new java.awt.Dimension(253, 100));
@@ -208,12 +209,8 @@ public class VistaMateriales extends javax.swing.JFrame {
 
         jLabel7.setText("Proveedor");
 
+        proveedor_input.setEditable(false);
         proveedor_input.setPreferredSize(new java.awt.Dimension(140, 24));
-        proveedor_input.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                proveedor_inputActionPerformed(evt);
-            }
-        });
 
         buscar_proveedor_button.setText("ok");
 
@@ -245,6 +242,12 @@ public class VistaMateriales extends javax.swing.JFrame {
         jPanel15.setMinimumSize(new java.awt.Dimension(253, 44));
 
         jLabel4.setText("Stock");
+
+        stock_input.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                control_ingreso_stock(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -410,9 +413,11 @@ public class VistaMateriales extends javax.swing.JFrame {
         //}
     }//GEN-LAST:event_focusBuscar
 
-    private void proveedor_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proveedor_inputActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_proveedor_inputActionPerformed
+    private void control_ingreso_stock(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_control_ingreso_stock
+        char c =evt.getKeyChar();
+
+        if(c<'0' || c> '9' ) evt.consume();
+    }//GEN-LAST:event_control_ingreso_stock
 
     /**
      * @param args the command line arguments

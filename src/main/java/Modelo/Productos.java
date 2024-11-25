@@ -49,7 +49,7 @@ public class Productos {
     }
 
     public boolean editar_producto(String medida, String color_cera, String tipo_pintado, int stock) {
-
+        
         StringBuilder sql = new StringBuilder("UPDATE producto_almacenado SET ");
         boolean primero = true;
 

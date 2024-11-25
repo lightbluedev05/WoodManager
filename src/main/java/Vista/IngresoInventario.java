@@ -1,20 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package Vista;
 
-/**
- *
- * @author Mihae
- */
+
 public class IngresoInventario extends javax.swing.JPanel {
 
-    /**
-     * Creates new form IngresoInventario
-     */
+    public SeleccionMaterial sm;
+    public SeleccionProducto sp;
+    
     public IngresoInventario() {
         initComponents();
+        sm = new SeleccionMaterial();
+        sp = new SeleccionProducto();
     }
 
     /**
@@ -30,53 +25,53 @@ public class IngresoInventario extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        material_nombre_input = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        material_stock_input = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        material_unidad_input = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        material_codigo_input = new javax.swing.JTextField();
+        material_buscar_button = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton9 = new javax.swing.JButton();
+        material_cantidad_input = new javax.swing.JTextField();
+        material_anadir_button = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        tipo_pintado_input = new javax.swing.JTextField();
         jPanel12 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        producto_stock_input = new javax.swing.JTextField();
         jPanel13 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        producto_medida_input = new javax.swing.JTextField();
         jPanel14 = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        producto_codigo_input = new javax.swing.JTextField();
+        producto_buscar_button = new javax.swing.JButton();
         jPanel16 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jButton10 = new javax.swing.JButton();
+        producto_cantidad_input = new javax.swing.JTextField();
+        producto_anadir_button = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabla_ingresos = new javax.swing.JTable();
         jPanel17 = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
+        eliminar_button = new javax.swing.JButton();
         jPanel19 = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
+        guardar_button = new javax.swing.JButton();
         jPanel20 = new javax.swing.JPanel();
-        jButton8 = new javax.swing.JButton();
+        salir_button = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(250, 246, 240));
         setMaximumSize(new java.awt.Dimension(600, 439));
@@ -86,7 +81,7 @@ public class IngresoInventario extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(250, 246, 240));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(23, 3, 18), 1, true));
         jPanel1.setMinimumSize(new java.awt.Dimension(509, 102));
-        jPanel1.setLayout(new java.awt.GridLayout());
+        jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel3.setBackground(new java.awt.Color(250, 246, 240));
         jPanel3.setMinimumSize(new java.awt.Dimension(253, 100));
@@ -103,7 +98,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1)
+                .addComponent(material_nombre_input)
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
@@ -112,7 +107,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(material_nombre_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10))
         );
 
@@ -122,6 +117,12 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jLabel5.setText("Stock");
 
+        material_stock_input.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                controlador_stock_material_ingreso(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -130,7 +131,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField3)
+                .addComponent(material_stock_input)
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
@@ -139,7 +140,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(material_stock_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10))
         );
 
@@ -149,9 +150,9 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jLabel6.setText("Unidad");
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        material_unidad_input.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                material_unidad_inputActionPerformed(evt);
             }
         });
 
@@ -163,7 +164,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(material_unidad_input, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
@@ -172,7 +173,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(material_unidad_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10))
         );
 
@@ -207,14 +208,14 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jLabel7.setText("Codigo");
 
-        jTextField5.setPreferredSize(new java.awt.Dimension(140, 24));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        material_codigo_input.setPreferredSize(new java.awt.Dimension(140, 24));
+        material_codigo_input.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                material_codigo_inputActionPerformed(evt);
             }
         });
 
-        jButton1.setText("ok");
+        material_buscar_button.setText("ok");
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -224,9 +225,9 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(material_codigo_input, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(material_buscar_button)
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
@@ -235,8 +236,8 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(material_codigo_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(material_buscar_button))
                 .addGap(10, 10, 10))
         );
 
@@ -246,6 +247,12 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jLabel4.setText("Cantidad");
 
+        material_cantidad_input.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                controlador_cantidad_material_ingreso(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
@@ -254,7 +261,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2)
+                .addComponent(material_cantidad_input)
                 .addContainerGap())
         );
         jPanel11Layout.setVerticalGroup(
@@ -263,11 +270,11 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(material_cantidad_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        jButton9.setText("Añadir");
+        material_anadir_button.setText("Añadir");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -280,7 +287,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(material_anadir_button, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -290,7 +297,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(0, 0, 0)
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton9)
+                .addComponent(material_anadir_button)
                 .addGap(0, 13, Short.MAX_VALUE))
         );
 
@@ -298,14 +305,14 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(250, 246, 240));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(23, 3, 18)));
-        jPanel2.setLayout(new java.awt.GridLayout());
+        jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel8.setBackground(new java.awt.Color(250, 246, 240));
         jPanel8.setMinimumSize(new java.awt.Dimension(253, 100));
 
         jPanel9.setBackground(new java.awt.Color(250, 246, 240));
 
-        jLabel8.setText("Nombre");
+        jLabel8.setText("Tipo Pintado");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -315,7 +322,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField6)
+                .addComponent(tipo_pintado_input)
                 .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
@@ -324,7 +331,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tipo_pintado_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10))
         );
 
@@ -332,6 +339,12 @@ public class IngresoInventario extends javax.swing.JPanel {
         jPanel12.setMinimumSize(new java.awt.Dimension(253, 44));
 
         jLabel9.setText("Stock");
+
+        producto_stock_input.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                controlador_stock_producto_ingreso(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -341,7 +354,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel9)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField7)
+                .addComponent(producto_stock_input)
                 .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
@@ -350,7 +363,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(producto_stock_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10))
         );
 
@@ -367,7 +380,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
+                .addComponent(producto_medida_input, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel13Layout.setVerticalGroup(
@@ -376,7 +389,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(producto_medida_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10))
         );
 
@@ -410,13 +423,13 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jLabel11.setText("Codigo");
 
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        producto_codigo_input.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                producto_codigo_inputActionPerformed(evt);
             }
         });
 
-        jButton2.setText("ok");
+        producto_buscar_button.setText("ok");
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -426,9 +439,9 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(producto_codigo_input, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(producto_buscar_button)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
@@ -437,8 +450,8 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
+                    .addComponent(producto_codigo_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(producto_buscar_button))
                 .addGap(10, 10, 10))
         );
 
@@ -446,6 +459,12 @@ public class IngresoInventario extends javax.swing.JPanel {
         jPanel16.setMinimumSize(new java.awt.Dimension(253, 44));
 
         jLabel12.setText("Cantidad");
+
+        producto_cantidad_input.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                controlador_cantidad_producto_ingreso(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -455,7 +474,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField10)
+                .addComponent(producto_cantidad_input)
                 .addContainerGap())
         );
         jPanel16Layout.setVerticalGroup(
@@ -464,14 +483,14 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(producto_cantidad_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10))
         );
 
-        jButton10.setText("Añadir");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        producto_anadir_button.setText("Añadir");
+        producto_anadir_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                producto_anadir_buttonActionPerformed(evt);
             }
         });
 
@@ -486,7 +505,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(producto_anadir_button, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel14Layout.setVerticalGroup(
@@ -496,7 +515,7 @@ public class IngresoInventario extends javax.swing.JPanel {
                 .addGap(0, 0, 0)
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton10)
+                .addComponent(producto_anadir_button)
                 .addGap(0, 14, Short.MAX_VALUE))
         );
 
@@ -506,7 +525,7 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jLabel2.setText("Producto");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabla_ingresos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -517,28 +536,28 @@ public class IngresoInventario extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabla_ingresos);
 
-        jPanel17.setLayout(new java.awt.GridLayout());
+        jPanel17.setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel18.setLayout(new java.awt.GridBagLayout());
 
-        jButton6.setText("Eliminar");
-        jPanel18.add(jButton6, new java.awt.GridBagConstraints());
+        eliminar_button.setText("Eliminar");
+        jPanel18.add(eliminar_button, new java.awt.GridBagConstraints());
 
         jPanel17.add(jPanel18);
 
         jPanel19.setLayout(new java.awt.GridBagLayout());
 
-        jButton7.setText("Guardar");
-        jPanel19.add(jButton7, new java.awt.GridBagConstraints());
+        guardar_button.setText("Guardar");
+        jPanel19.add(guardar_button, new java.awt.GridBagConstraints());
 
         jPanel17.add(jPanel19);
 
         jPanel20.setLayout(new java.awt.GridBagLayout());
 
-        jButton8.setText("Salir");
-        jPanel20.add(jButton8, new java.awt.GridBagConstraints());
+        salir_button.setText("Salir");
+        jPanel20.add(salir_button, new java.awt.GridBagConstraints());
 
         jPanel17.add(jPanel20);
 
@@ -576,31 +595,124 @@ public class IngresoInventario extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void material_codigo_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_material_codigo_inputActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_material_codigo_inputActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void producto_codigo_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_producto_codigo_inputActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_producto_codigo_inputActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void producto_anadir_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_producto_anadir_buttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_producto_anadir_buttonActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void material_unidad_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_material_unidad_inputActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_material_unidad_inputActionPerformed
 
+    private void controlador_stock_material_ingreso(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_controlador_stock_material_ingreso
+        char c =evt.getKeyChar();
+
+        if(c<'0' || c> '9' ) evt.consume();
+    }//GEN-LAST:event_controlador_stock_material_ingreso
+
+    private void controlador_cantidad_material_ingreso(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_controlador_cantidad_material_ingreso
+        char c =evt.getKeyChar();
+
+        if(c<'0' || c> '9' ) evt.consume();
+    }//GEN-LAST:event_controlador_cantidad_material_ingreso
+
+    private void controlador_stock_producto_ingreso(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_controlador_stock_producto_ingreso
+        char c =evt.getKeyChar();
+
+        if(c<'0' || c> '9' ) evt.consume();
+    }//GEN-LAST:event_controlador_stock_producto_ingreso
+
+    private void controlador_cantidad_producto_ingreso(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_controlador_cantidad_producto_ingreso
+        char c =evt.getKeyChar();
+
+        if(c<'0' || c> '9' ) evt.consume();
+    }//GEN-LAST:event_controlador_cantidad_producto_ingreso
+    
+    
+    public javax.swing.JButton get_eliminar_button() {
+        return eliminar_button;
+    }
+
+    public javax.swing.JButton get_guardar_button() {
+        return guardar_button;
+    }
+
+    public javax.swing.JButton get_material_anadir_button() {
+        return material_anadir_button;
+    }
+
+    public javax.swing.JButton get_material_buscar_button() {
+        return material_buscar_button;
+    }
+
+    public javax.swing.JTextField get_material_cantidad_input() {
+        return material_cantidad_input;
+    }
+
+    public javax.swing.JTextField get_material_codigo_input() {
+        return material_codigo_input;
+    }
+
+    public javax.swing.JTextField get_material_nombre_input() {
+        return material_nombre_input;
+    }
+
+    public javax.swing.JTextField get_material_stock_input() {
+        return material_stock_input;
+    }
+
+    public javax.swing.JTextField get_material_unidad_input() {
+        return material_unidad_input;
+    }
+
+    public javax.swing.JButton get_producto_anadir_button() {
+        return producto_anadir_button;
+    }
+
+    public javax.swing.JButton get_producto_buscar_button() {
+        return producto_buscar_button;
+    }
+
+    public javax.swing.JTextField get_producto_cantidad_input() {
+        return producto_cantidad_input;
+    }
+
+    public javax.swing.JTextField get_producto_codigo_input() {
+        return producto_codigo_input;
+    }
+
+    public javax.swing.JTextField get_producto_medida_input() {
+        return producto_medida_input;
+    }
+
+    public javax.swing.JTextField get_producto_tipo_pintado_input() {
+        return tipo_pintado_input;
+    }
+
+    public javax.swing.JTextField get_producto_stock_input() {
+        return producto_stock_input;
+    }
+
+    public javax.swing.JButton get_salir_button() {
+        return salir_button;
+    }
+
+    public javax.swing.JTable get_tabla_ingresos() {
+        return tabla_ingresos;
+    }
+
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton eliminar_button;
+    private javax.swing.JButton guardar_button;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -634,16 +746,21 @@ public class IngresoInventario extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JButton material_anadir_button;
+    private javax.swing.JButton material_buscar_button;
+    private javax.swing.JTextField material_cantidad_input;
+    private javax.swing.JTextField material_codigo_input;
+    private javax.swing.JTextField material_nombre_input;
+    private javax.swing.JTextField material_stock_input;
+    private javax.swing.JTextField material_unidad_input;
+    private javax.swing.JButton producto_anadir_button;
+    private javax.swing.JButton producto_buscar_button;
+    private javax.swing.JTextField producto_cantidad_input;
+    private javax.swing.JTextField producto_codigo_input;
+    private javax.swing.JTextField producto_medida_input;
+    private javax.swing.JTextField producto_stock_input;
+    private javax.swing.JButton salir_button;
+    private javax.swing.JTable tabla_ingresos;
+    private javax.swing.JTextField tipo_pintado_input;
     // End of variables declaration//GEN-END:variables
 }

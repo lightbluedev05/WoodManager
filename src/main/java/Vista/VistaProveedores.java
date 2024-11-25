@@ -5,6 +5,7 @@
 package Vista;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -20,7 +21,7 @@ public class VistaProveedores extends javax.swing.JFrame {
      */
     public VistaProveedores() {
         initComponents();
-        
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -123,7 +124,7 @@ public class VistaProveedores extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(250, 246, 240));
         jPanel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(23, 3, 18), 1, true));
         jPanel8.setMinimumSize(new java.awt.Dimension(509, 102));
-        jPanel8.setLayout(new java.awt.GridLayout());
+        jPanel8.setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel9.setBackground(new java.awt.Color(250, 246, 240));
         jPanel9.setMinimumSize(new java.awt.Dimension(253, 100));
@@ -208,6 +209,11 @@ public class VistaProveedores extends javax.swing.JFrame {
         telefono_input.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 telefono_inputActionPerformed(evt);
+            }
+        });
+        telefono_input.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                controlador_telefono_ingreso(evt);
             }
         });
 
@@ -373,6 +379,12 @@ public class VistaProveedores extends javax.swing.JFrame {
     private void telefono_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefono_inputActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_telefono_inputActionPerformed
+
+    private void controlador_telefono_ingreso(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_controlador_telefono_ingreso
+        char c =evt.getKeyChar();
+
+        if(c<'0' || c> '9' ) evt.consume();
+    }//GEN-LAST:event_controlador_telefono_ingreso
 
     /**
      * @param args the command line arguments

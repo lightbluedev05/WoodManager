@@ -2,6 +2,7 @@ package Vista;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import javax.swing.JFrame;
 
 
 public class VistaIngresoPedido extends javax.swing.JFrame {
@@ -12,6 +13,17 @@ public class VistaIngresoPedido extends javax.swing.JFrame {
     
     public VistaIngresoPedido() {
         initComponents();
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        
+        jButton1.setEnabled(false);
+        jButton1.setBackground(new Color(0,4,100));
+        jButton2.setEnabled(true);
+        jButton2.setBackground(new Color(45,78,163));
+        
+        panel_vacio.removeAll();
+        panel_vacio.add(ingresoInventario, BorderLayout.CENTER);
+        panel_vacio.revalidate();
+        panel_vacio.repaint();
     }
 
     /**
@@ -137,9 +149,7 @@ public class VistaIngresoPedido extends javax.swing.JFrame {
         panel_vacio.repaint();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

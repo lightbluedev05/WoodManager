@@ -228,7 +228,7 @@ public class Materiales {
                 if(fila_seleccionada != -1){
                     material_seleccionado = (int) tabla.getValueAt(fila_seleccionada, 0);
                     String nombre = (String) tabla.getValueAt(fila_seleccionada, 1);
-                    String id_proveedor = (String) tabla.getValueAt(fila_seleccionada, 2);
+                    String id_proveedor = Integer.toString((int) tabla.getValueAt(fila_seleccionada, 2));
                     String unidad_medida = (String) tabla.getValueAt(fila_seleccionada, 3);
                     String stock = Integer.toString((int) tabla.getValueAt(fila_seleccionada, 4));
                     
