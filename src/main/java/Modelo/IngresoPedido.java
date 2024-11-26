@@ -24,6 +24,10 @@ public class IngresoPedido {
     
     public boolean ingreso_anadir_material(int id_material, String nombre, int cantidad){
         
+        if(cantidad<0){
+            return false;
+        }
+        
         HashMap<String, Object> material = new HashMap<>();
         material.put("tipo", "material");
         material.put("id", id_material);
@@ -38,6 +42,10 @@ public class IngresoPedido {
     }
     
     public boolean ingreso_anadir_producto(int id_producto, String nombre, int cantidad){
+        
+        if(cantidad<0){
+            return false;
+        }
         
         HashMap<String, Object> producto = new HashMap<>();
         producto.put("tipo", "producto");

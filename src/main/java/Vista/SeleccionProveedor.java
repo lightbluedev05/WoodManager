@@ -5,6 +5,7 @@ import Modelo.Proveedores;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
 
 public class SeleccionProveedor extends javax.swing.JFrame {
@@ -14,6 +15,7 @@ public class SeleccionProveedor extends javax.swing.JFrame {
     public SeleccionProveedor() {
         initComponents();
         iniciar_tabla();
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
     
     public void iniciar_tabla(){

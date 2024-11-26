@@ -26,6 +26,13 @@ public class Proveedores {
             return false;
         }
         
+        try{
+            int aux = Integer.parseInt(telefono);
+        } catch(Exception e){
+            System.out.println(e);
+            return false;
+        }
+        
         String sql = "INSERT INTO proveedor (nombre, telefono, descripcion) VALUES (?, ?, ?)";
 
         try {

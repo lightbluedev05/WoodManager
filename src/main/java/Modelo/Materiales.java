@@ -25,6 +25,9 @@ public class Materiales {
         if(nombre_material.isEmpty() || id_proveedor == 0 || unidad_medida.isEmpty()){
             return false;
         }
+        if(stock<0){
+            return false;
+        }
         
         String sql = "INSERT INTO material_almacenado ("
                    + "nombre_material, id_proveedor, unidad_medida, stock"
