@@ -17,6 +17,8 @@ public class MaterialesProductosPedido extends javax.swing.JFrame {
         panel_vacio.add(ingreso_inventario, BorderLayout.CENTER);
         panel_vacio.revalidate();
         panel_vacio.repaint();
+        
+        this.setDefaultCloseOperation(HIDE_ON_CLOSE);
     }
 
     /**

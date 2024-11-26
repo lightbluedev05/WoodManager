@@ -43,7 +43,8 @@ public class ControladorProductos implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == vistaProductos.get_anadir_button()){
-            
+            try{
+                
             String medida = vistaProductos.get_medida_input().getText();
             String color_cera = vistaProductos.get_color_cera_input().getText();
             String tipo_pintado = vistaProductos.get_tipo_pintado_input().getText();
@@ -60,6 +61,10 @@ public class ControladorProductos implements ActionListener{
                     "Exito", JOptionPane.INFORMATION_MESSAGE);
             productos.actualizar_tabla(vistaProductos.get_tabla_productos());
             return;
+            } catch (Exception ex){
+                JOptionPane.showMessageDialog(null, "No se pudo agregar", 
+                    "Error",JOptionPane.ERROR_MESSAGE);
+            }
         }
         
         if(e.getSource() == vistaProductos.get_buscar_button()){

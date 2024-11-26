@@ -50,23 +50,27 @@ public class ControladorMateriales implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == vistaMateriales.get_anadir_button()){
-            
-            String nombre = vistaMateriales.get_nombre_input().getText();
-            int id_proveedor = Integer.parseInt(vistaMateriales.get_proveedor_input().getText());
-            String unidad_medida = vistaMateriales.get_unidad_medida_input().getText();
-            int stock = Integer.parseInt(vistaMateriales.get_stock_input().getText());
-            
-            boolean exito = materiales.anadir_material(nombre, id_proveedor, unidad_medida, stock);
-            
-            if(!exito){
-                JOptionPane.showMessageDialog(null, "No se pudo agregar", 
-                    "Error",JOptionPane.ERROR_MESSAGE);
+            try{   
+                String nombre = vistaMateriales.get_nombre_input().getText();
+                int id_proveedor = Integer.parseInt(vistaMateriales.get_proveedor_input().getText());
+                String unidad_medida = vistaMateriales.get_unidad_medida_input().getText();
+                int stock = Integer.parseInt(vistaMateriales.get_stock_input().getText());
+
+                boolean exito = materiales.anadir_material(nombre, id_proveedor, unidad_medida, stock);
+
+                if(!exito){
+                    JOptionPane.showMessageDialog(null, "No se pudo agregar", 
+                        "Error",JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+                JOptionPane.showMessageDialog(null, "Material agregado con exito",
+                        "Exito", JOptionPane.INFORMATION_MESSAGE);
+                materiales.actualizar_tabla(vistaMateriales.get_tabla_materiales());
                 return;
+            } catch (Exception ex){
+                JOptionPane.showMessageDialog(null, "No se puede agregar", 
+                "Error",JOptionPane.ERROR_MESSAGE);
             }
-            JOptionPane.showMessageDialog(null, "Material agregado con exito",
-                    "Exito", JOptionPane.INFORMATION_MESSAGE);
-            materiales.actualizar_tabla(vistaMateriales.get_tabla_materiales());
-            return;
         }
         
         if(e.getSource() == vistaMateriales.get_buscar_button()){
