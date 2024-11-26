@@ -90,6 +90,8 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jLabel3.setText("Nombre");
 
+        material_nombre_input.setEditable(false);
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -117,6 +119,7 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jLabel5.setText("Stock");
 
+        material_stock_input.setEditable(false);
         material_stock_input.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 controlador_stock_material_ingreso(evt);
@@ -150,6 +153,7 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jLabel6.setText("Unidad");
 
+        material_unidad_input.setEditable(false);
         material_unidad_input.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 material_unidad_inputActionPerformed(evt);
@@ -208,6 +212,7 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jLabel7.setText("Codigo");
 
+        material_codigo_input.setEditable(false);
         material_codigo_input.setPreferredSize(new java.awt.Dimension(140, 24));
         material_codigo_input.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -314,6 +319,8 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jLabel8.setText("Tipo Pintado");
 
+        tipo_pintado_input.setEditable(false);
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -340,6 +347,7 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jLabel9.setText("Stock");
 
+        producto_stock_input.setEditable(false);
         producto_stock_input.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 controlador_stock_producto_ingreso(evt);
@@ -371,6 +379,8 @@ public class IngresoInventario extends javax.swing.JPanel {
         jPanel13.setMinimumSize(new java.awt.Dimension(253, 44));
 
         jLabel10.setText("Medida");
+
+        producto_medida_input.setEditable(false);
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -423,6 +433,7 @@ public class IngresoInventario extends javax.swing.JPanel {
 
         jLabel11.setText("Codigo");
 
+        producto_codigo_input.setEditable(false);
         producto_codigo_input.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 producto_codigo_inputActionPerformed(evt);
