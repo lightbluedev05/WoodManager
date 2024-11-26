@@ -302,7 +302,7 @@ public class ControladorIngresoPedido implements ActionListener{
             int cantidad = Integer.parseInt(mpp.get_producto_cantidad_input().getText());
             
             HashMap<String, Object> producto = new HashMap<>();
-            producto.put("tipo", "material");
+            producto.put("tipo", "producto");
             producto.put("id", id_producto);
             producto.put("nombre", nombre);
             producto.put("cantidad", cantidad);

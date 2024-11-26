@@ -242,6 +242,7 @@ public class IngresoPedido {
     
     public boolean guardar_salidas(ArrayList<HashMap<String, Object>> lista_salidas, int id_detalle_pedido) {
         boolean resultado = true;
+        System.out.println(lista_salidas);
 
         if (lista_salidas.isEmpty() || lista_salidas == null) {
             return false;
